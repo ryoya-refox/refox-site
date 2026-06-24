@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -48,14 +49,20 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* ロゴ */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center group">
             <div className="animate-flicker">
-              <span
-                className="font-zen font-black text-lg tracking-wider"
-                style={{ color: "#f0eaff" }}
-              >
-                株式会社リフォックス
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="株式会社リフォックス"
+                height={40}
+                width={160}
+                style={{
+                  height: 40,
+                  width: "auto",
+                  filter: "brightness(0) invert(1)",
+                }}
+                priority
+              />
             </div>
           </Link>
 
