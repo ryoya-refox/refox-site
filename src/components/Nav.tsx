@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -51,17 +50,15 @@ export default function Nav() {
           {/* ロゴ */}
           <Link href="/" className="flex items-center group">
             <div className="animate-flicker">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/logo.png"
                 alt="株式会社リフォックス"
-                height={40}
-                width={160}
                 style={{
                   height: 40,
                   width: "auto",
                   filter: "brightness(0) invert(1)",
                 }}
-                priority
               />
             </div>
           </Link>
