@@ -76,93 +76,106 @@ export default function HomePage() {
         <CityScape />
 
         {/* Hero コンテンツ */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-48">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <div
-              className="font-mono text-xs mb-4 tracking-widest"
-              style={{ color: "rgba(240,234,255,0.4)" }}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* 左カラム */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              RE-FOX INC. — EST.2014
-            </div>
-
-            <h1 className="font-zen font-black leading-none mb-6">
-              <span
-                className="block text-5xl sm:text-7xl lg:text-8xl animate-flicker"
-                style={{ color: "#f0eaff" }}
+              <div
+                className="font-mono text-xs mb-4 tracking-widest"
+                style={{ color: "rgba(240,234,255,0.4)" }}
               >
-                日本と世界を
-              </span>
-              <span
-                className="block text-5xl sm:text-7xl lg:text-8xl animate-glow-pulse"
-                style={{ color: "#00ffd2" }}
-              >
-                イベントで繋ぐ
-              </span>
-            </h1>
+                RE-FOX INC. — EST.2014
+              </div>
 
-            <p
-              className="font-noto text-base sm:text-lg max-w-xl leading-relaxed mt-6 mb-10"
-              style={{ color: "rgba(240,234,255,0.65)" }}
-            >
-              国内外のイベント企画・運営・設営から<br />
-              海外進出支援まで、ビジネスを世界へ。
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/works"
-                className="relative overflow-hidden font-mono text-sm px-8 py-3 border transition-all duration-200 group"
-                style={{
-                  borderColor: "#00ffd2",
-                  color: "#00ffd2",
-                  background: "rgba(0,255,210,0.08)",
-                }}
-              >
-                <span className="relative z-10">実績を見る</span>
+              <h1 className="font-zen font-black leading-none mb-6">
                 <span
-                  className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"
-                  style={{ background: "rgba(0,255,210,0.15)" }}
-                />
+                  className="block text-5xl sm:text-7xl lg:text-8xl animate-flicker"
+                  style={{ color: "#f0eaff" }}
+                >
+                  日本と世界を
+                </span>
                 <span
-                  className="absolute inset-0 -translate-x-full animate-shimmer"
+                  className="block text-5xl sm:text-7xl lg:text-8xl animate-glow-pulse"
+                  style={{ color: "#00ffd2" }}
+                >
+                  イベントで繋ぐ
+                </span>
+              </h1>
+
+              <p
+                className="font-noto text-base sm:text-lg max-w-xl leading-relaxed mt-6 mb-10"
+                style={{ color: "rgba(240,234,255,0.65)" }}
+              >
+                国内外のイベント企画・運営・設営から<br />
+                海外進出支援まで、ビジネスを世界へ。
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-12">
+                <Link
+                  href="/works"
+                  className="relative overflow-hidden font-mono text-sm px-8 py-3 border transition-all duration-200 group"
                   style={{
-                    background: "linear-gradient(90deg, transparent, rgba(0,255,210,0.3), transparent)",
+                    borderColor: "#00ffd2",
+                    color: "#00ffd2",
+                    background: "rgba(0,255,210,0.08)",
                   }}
-                />
-              </Link>
-              <Link
-                href="/contact"
-                className="font-mono text-sm px-8 py-3 border transition-colors duration-200"
-                style={{
-                  borderColor: "rgba(240,234,255,0.3)",
-                  color: "rgba(240,234,255,0.7)",
-                }}
-              >
-                お問い合わせ
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+                >
+                  <span className="relative z-10">実績を見る</span>
+                  <span
+                    className="absolute inset-0 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"
+                    style={{ background: "rgba(0,255,210,0.15)" }}
+                  />
+                  <span
+                    className="absolute inset-0 -translate-x-full animate-shimmer"
+                    style={{
+                      background: "linear-gradient(90deg, transparent, rgba(0,255,210,0.3), transparent)",
+                    }}
+                  />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="font-mono text-sm px-8 py-3 border transition-colors duration-200"
+                  style={{
+                    borderColor: "rgba(240,234,255,0.3)",
+                    color: "rgba(240,234,255,0.7)",
+                  }}
+                >
+                  お問い合わせ
+                </Link>
+              </div>
 
-      {/* ───── STATS ───── */}
-      <section
-        className="py-16 border-y"
-        style={{
-          borderColor: "rgba(160,80,255,0.15)",
-          background: "rgba(20,8,40,0.75)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <StatCounter target={28} suffix="+" label="TOTAL WORKS" color="#00ffd2" />
-            <StatCounter target={5} label="COUNTRIES" color="#ff2d78" />
-            <StatCounter target={12} label="YEARS" color="#a050ff" />
-            <StatCounter target={2014} label="FOUNDED" color="#ffd200" duration={1500} />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <StatCounter target={28} suffix="+" label="TOTAL WORKS" color="#00ffd2" />
+                <StatCounter target={5} label="COUNTRIES" color="#ff2d78" />
+                <StatCounter target={12} label="YEARS" color="#a050ff" />
+                <StatCounter target={2014} label="FOUNDED" color="#ffd200" duration={1500} />
+              </div>
+            </motion.div>
+
+            {/* 右カラム：ネオン看板ロゴ */}
+            <motion.div
+              className="hidden lg:flex justify-center items-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo.png"
+                alt="RE-FOX"
+                className="animate-float"
+                style={{
+                  maxWidth: "300px",
+                  width: "100%",
+                  filter:
+                    "brightness(0) invert(1) drop-shadow(0 0 20px #00ffd2) drop-shadow(0 0 40px #00ffd2)",
+                }}
+              />
+            </motion.div>
           </div>
         </div>
       </section>

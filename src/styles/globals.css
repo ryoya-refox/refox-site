@@ -99,6 +99,11 @@ body {
   100% { top: 110%; }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
 /* ── Utility classes ── */
 
 .animate-scanline {
@@ -131,6 +136,10 @@ body {
 
 .animate-card-scanline {
   animation: cardScanline 3s linear infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
 /* ── Scrollbar ── */
