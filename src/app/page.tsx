@@ -149,8 +149,8 @@ export default function HomePage() {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                <StatCounter target={28} suffix="+" label="TOTAL WORKS" color="#00ffd2" />
-                <StatCounter target={5} label="COUNTRIES" color="#ff2d78" />
+                <StatCounter target={85} suffix="+" label="TOTAL WORKS" color="#00ffd2" />
+                <StatCounter target={12} label="COUNTRIES" color="#ff2d78" />
                 <StatCounter target={12} label="YEARS" color="#a050ff" />
                 <StatCounter target={2014} label="FOUNDED" color="#ffd200" duration={1500} />
               </div>
