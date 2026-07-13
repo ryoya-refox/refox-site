@@ -77,7 +77,7 @@ export default function HomePage() {
 
         {/* Hero コンテンツ */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center">
             {/* 左カラム */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -93,13 +93,13 @@ export default function HomePage() {
 
               <h1 className="font-zen font-black leading-none mb-6">
                 <span
-                  className="block text-5xl sm:text-7xl lg:text-8xl animate-flicker"
+                  className="block whitespace-nowrap text-5xl sm:text-6xl lg:text-6xl xl:text-7xl animate-flicker"
                   style={{ color: "#f0eaff" }}
                 >
                   日本と世界を
                 </span>
                 <span
-                  className="block text-5xl sm:text-7xl lg:text-8xl animate-glow-pulse"
+                  className="block whitespace-nowrap text-5xl sm:text-6xl lg:text-6xl xl:text-7xl animate-glow-pulse"
                   style={{ color: "#00ffd2" }}
                 >
                   イベントで繋ぐ
